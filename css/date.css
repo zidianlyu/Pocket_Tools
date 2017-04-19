@@ -25,27 +25,28 @@
     align-items: center;
     border-radius: 50%;
     border: 1px double #d5a569;
+    position: relative;
 }
 
 .date-face p {
     margin: 0 auto;
 }
 
-.date-day {
-    font-size: 14px;
-}
 
-.date-time {
-    text-align: center;
-    font-size: 122%;
-}
+/*first*/
 
-.date-effect {
+.date-effect-first {
+    position: absolute;
+    top: 28px;
     font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #000;
+}
+
+.date-day {
+    font-size: 14px;
 }
 
 .date-specific {
@@ -54,13 +55,56 @@
     border: 1px groove #ccc;
 }
 
+
+/*second*/
+
+.date-effect-second {
+    position: absolute;
+    top: 77px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.date-time {
+    text-align: center;
+    font-size: 122%;
+}
+
+
+/*third*/
+
+.date-effect-third {
+    position: absolute;
+    bottom: 40px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+
+/*forth*/
+
+.date-effect-forth {
+    position: absolute;
+    bottom: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
 .date-ampm {
     margin: 0 5px !important;
     background: #fff;
     border: 1px groove #ccc;
 }
 
-
 .forcast-city {
-    font-size: 13px;
+    font-size: 10px;
 }
