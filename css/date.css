@@ -1,0 +1,66 @@
+/*date*/
+
+.date-base {
+    margin: 0 auto;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.date-face {
+    height: 180px;
+    width: 180px;
+    background: linear-gradient(#ddd, #eee, #ddd);
+    /*background: rgba(0, 0, 0, 0.3);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px double #d5a569;
+}
+
+.date-face p {
+    margin: 0 auto;
+}
+
+.date-day {
+    font-size: 14px;
+}
+
+.date-time {
+    text-align: center;
+    font-size: 122%;
+}
+
+.date-effect {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.date-specific {
+    margin: 0 5px !important;
+    background: #fff;
+    border: 1px groove #ccc;
+}
+
+.date-ampm {
+    margin: 0 5px !important;
+    background: #fff;
+    border: 1px groove #ccc;
+}
+
+
+.forcast-city {
+    font-size: 13px;
+}

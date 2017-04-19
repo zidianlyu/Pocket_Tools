@@ -36,7 +36,8 @@ $(document).ready(function() {
             type: 'GET',
             url: 'https://restcountries.eu/rest/v1/alpha?codes=' + country,
             success: function(data) {
-                $('.forecast-city').text(city + ', ' + region);
+                $('.forecast-city').text(city);
+                // $('.forecast-city').text(city + ', ' + region);
                 // $('.forecast-country').text(data[0].name);
             }
         });
@@ -116,7 +117,7 @@ $(document).ready(function() {
             $('.forecast-summary').text(condition);
             $('.temp-l').text(low + '\xB0');
             $('.temp-h').text(high + '\xB0');
-            $('.temp-now').text(temp);
+            $('.temp-now').text(temp + '\xB0');
 
         } //end displayWeather
 

@@ -1,2 +1,12 @@
+@import url('font.css');
 @import url('ripple.css');
 @import url('loader.css');
+@import url('watch.css');
+@import url('date.css');
+body {
+    background: #fff;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}

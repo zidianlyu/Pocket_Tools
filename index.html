@@ -22,7 +22,7 @@
 
 <body>
     <!-- loader -->
-    <div id="loading">
+    <!-- <div id="loading">
         <div id="loading-center">
             <div id="loading-center-absolute">
                 <div class="object" id="first_object"></div>
@@ -31,29 +31,47 @@
                 <div class="object" id="forth_object"></div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- machanical watch -->
-    <div class="">
-      <embed width="550" height="400" wmode="transparent" type="application/x-shockwave-flash" quality="high" src="img/watch.swf">
+    <div class="watch">
+        <embed wmode="transparent" type="application/x-shockwave-flash" quality="high" src="img/watch.swf">
+    </div>
+
+    <div id="date" class="date-base">
+        <div class="date-face">
+            <div class="date-effect-first">
+                <p class="date-weekday"></p>
+                <p class="date-specific"></p>
+                <p class="date-day"></p>
+            </div>
+            <div class="date-effect-second">
+                <p class="date-time"></p>
+                <p class="date-ampm"></p>
+            </div>
+            <div class="date-effect-third">
+              <p class="temp-now"></p>
+              <nav class="temp-tick">
+                <button id="temp-c" disabled>C</button>
+                <span class="convert-arrow">⇆</span>
+                <button id="temp-f">F</button>
+              </nav>
+            </div>
+            <div class="date-effect-third">
+              <p class="forecast-city"></p>
+            </div>
+        </div>
     </div>
 
 
     <div class="home-head">
         <div id="weather" class="weather">
-            <nav class="temp-tick">
-                <button id="temp-c" disabled>C</button>
-                <span class="convert-arrow">⇆</span>
-                <button id="temp-f">F</button>
-            </nav>
 
             <div class="forecast">
-                <p class="forecast-city"></p>
                 <div class="forecast-daily">
                     <span class="forecast-icon"></span>
                     <span class="wi wi-direction-up"></span>
                     <span class="temp-h"></span>
-                    <span class="temp-now"></span>
                     <span class="wi wi-direction-down"></span>
                     <span class="temp-l"></span>
                 </div>
@@ -80,7 +98,7 @@
 
     <script src="js/ripple.js"></script>
     <script src="js/loader.js"></script>
-    <script src="js/clock.js"></script>
+    <script src="js/date.js"></script>
     <script src="js/weather.js"></script>
 
 </body>
