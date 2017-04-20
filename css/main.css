@@ -3,6 +3,7 @@
 @import url('loader.css');
 @import url('watch.css');
 @import url('date.css');
+@import url('weather.css');
 body {
     background: #fff;
 }

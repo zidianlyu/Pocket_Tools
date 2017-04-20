@@ -18,7 +18,6 @@
     height: 180px;
     width: 180px;
     background: linear-gradient(#ddd, #eee, #ddd);
-    /*background: rgba(0, 0, 0, 0.3);*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,6 +25,7 @@
     border-radius: 50%;
     border: 1px double #d5a569;
     position: relative;
+    transition: all 1s ease-in-out;
 }
 
 .date-face p {
@@ -33,26 +33,49 @@
 }
 
 
+/*head*/
+
+.date-effect-head {
+    position: absolute;
+    top: 20px;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+}
+
+.date-weekday {
+    font-size: 15px;
+    font-family: 'Cinzel', serif;
+}
+
+
 /*first*/
 
 .date-effect-first {
     position: absolute;
-    top: 28px;
-    font-size: 15px;
+    top: 41px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #000;
 }
 
-.date-day {
+.date-mon {
     font-size: 14px;
+    font-family: 'Cinzel', serif;
+}
+.date-yr {
+    font-size: 14px;
+    font-family: 'Cinzel', serif;
 }
 
 .date-specific {
-    margin: 0 5px !important;
+    font-size: 15px;
+    margin: 0 3px !important;
     background: #fff;
-    border: 1px groove #ccc;
+    border-radius: 50%;
+    padding: 1px 3px 5px 6px;
+    border: 1px inset #eee;
 }
 
 
@@ -60,17 +83,29 @@
 
 .date-effect-second {
     position: absolute;
-    top: 77px;
-    font-size: 15px;
+    top: 73px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     color: #000;
 }
 
 .date-time {
-    text-align: center;
-    font-size: 122%;
+    font-family: 'Black Ops One', cursive;
+    width: 128px;
+    font-size: 27px;
+    padding: 2px 0px 0 8px;
+    border: 1px inset #eee;
+    background: #fff;
+    border-radius: 9px 15px 4px 15px;
+}
+
+.date-ampm {
+    margin: 0 0 0 2px !important;
+    background: #fff;
+    border-radius: 50%;
+    padding: 3px 6px 3px 4px;
+    border: 1px inset #eee;
 }
 
 
@@ -86,25 +121,39 @@
     color: #000;
 }
 
+.temp-now {
+    border: 1px inset #eee;
+    padding: 5px 5px 3px 3px;
+    background: white;
+    border-radius: 50%;
+    margin: 0 6px 0 0;
+}
+
+#temp-c {
+    border-radius: 50%;
+}
+
+#temp-f {
+    border-radius: 50%;
+}
+
 
 /*forth*/
 
 .date-effect-forth {
     position: absolute;
-    bottom: 20px;
+    bottom: 8px;
     font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     color: #000;
 }
 
-.date-ampm {
-    margin: 0 5px !important;
-    background: #fff;
-    border: 1px groove #ccc;
+.forecast-city {
+    font-size: 14px;
+    font-family: 'Cinzel', serif;
 }
 
-.forcast-city {
+.forecast-region {
     font-size: 10px;
+    font-family: 'Cinzel', serif;
 }

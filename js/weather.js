@@ -37,6 +37,7 @@ $(document).ready(function() {
             url: 'https://restcountries.eu/rest/v1/alpha?codes=' + country,
             success: function(data) {
                 $('.forecast-city').text(city);
+                $('.forecast-region').text(region);
                 // $('.forecast-city').text(city + ', ' + region);
                 // $('.forecast-country').text(data[0].name);
             }

@@ -1,12 +1,15 @@
 function update() {
-    let day = moment().format('MMM-YYYY');
+    let mon = moment().format('MMM');
+    let yr = moment().format('YYYY');
+
     let time = moment().format('h:mm:ss');
-    let date = moment().format('D');
-    let weekday = moment().format('ddd');
+    let date = moment().format('Do');
+    let weekday = moment().format('dddd');
     let ampm = moment().format('a')
-    $('.date-day').text(day);
-    $('.date-time').text(time);
     $('.date-specific').text(date);
+    $('.date-mon').text(mon);
+    $('.date-yr').text(yr);
+    $('.date-time').text(time);
     $('.date-weekday').text(weekday);
     $('.date-ampm').text(ampm);
 }
