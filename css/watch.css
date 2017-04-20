@@ -1,10 +1,7 @@
 .watch {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 50%;
-    transition: all 0.8s;
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    display: flex;
 }
 
 .watch embed {

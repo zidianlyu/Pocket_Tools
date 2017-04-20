@@ -56,26 +56,36 @@ $(document).ready(function() {
         function weather(data) {
 
             //main forecast
+            let cond = data.currently.icon.split('-');
+            cond.pop();
+            // debugger;
             let temp = Math.round(data.currently.temperature),
-                conditions = data.currently.icon.split('-').join(' '),
+                conditions = cond.join(' '),
                 icon = data.currently.icon,
                 low = Math.round(data.daily.data[0].temperatureMin),
                 high = Math.round(data.daily.data[0].temperatureMax);
-
+            // debugger;
             //weekly forecast
-            for (let i = 1; i < 6; i++) {
-                let day = moment.unix(data.daily.data[i].time).format('ddd'),
+            for (let i = 0; i < 4; i++) {
+
+                let weekConditions = data.daily.data[i].icon.split('-');
+                weekConditions.pop();
+                let day = moment.unix(data.daily.data[i].time).format('dddd'),
                     weekIcon = data.daily.data[i].icon,
-                    weekCond = data.daily.data[i].icon.split('-').join(' '),
+                    weekCond = weekConditions.join(' '),
                     weekLow = Math.round(data.daily.data[i].temperatureMin),
                     weekHigh = Math.round(data.daily.data[i].temperatureMax);
-
+                if (i === 0){
+                  day = 'Today';
+                  $('.temp-now').text(temp + '\xB0');
+                }
+                // debugger;
                 //display weekly weather
                 displayWeekly(day, weekIcon, weekCond, weekLow.toFixed(0), weekHigh.toFixed(0));
             }
 
             //display weather on homepage
-            displayWeather(icon, temp.toFixed(0), conditions, low, high);
+            // displayWeather(icon, temp.toFixed(0), conditions, low, high);
 
             //convert daily units
             $('#temp-f').on('click', function() {
@@ -84,12 +94,17 @@ $(document).ready(function() {
                 $('#temp-c').prop('disabled', false);
                 $('#temp-weekly').empty();
                 // six days weather
-                for (let i = 1; i < 6; i++) {
+                for (let i = 0; i < 4; i++) {
+                    let weekConditions = data.daily.data[i].icon.split('-');
+                    weekConditions.pop();
                     let day = moment.unix(data.daily.data[i].time).format('dddd'),
                         weekIcon = data.daily.data[i].icon,
-                        weekCond = data.daily.data[i].icon.split('-').join(' '),
+                        weekCond = weekConditions.join(' '),
                         weekLow = toF(Math.round(data.daily.data[i].temperatureMin)),
                         weekHigh = toF(Math.round(data.daily.data[i].temperatureMax));
+                    if (i === 0){
+                      day = 'Today';
+                    }
 
                     displayWeekly(day, weekIcon, weekCond, weekLow.toFixed(0), weekHigh.toFixed(0));
                 }
@@ -100,12 +115,17 @@ $(document).ready(function() {
                 $('#temp-c').prop('disabled', true);
                 $('#temp-f').prop('disabled', false);
                 $('#temp-weekly').empty();
-                for (let i = 1; i < 6; i++) {
+                for (let i = 0; i < 4; i++) {
+                    let weekConditions = data.daily.data[i].icon.split('-');
+                    weekConditions.pop();
                     let day = moment.unix(data.daily.data[i].time).format('dddd'),
                         weekIcon = data.daily.data[i].icon,
-                        weekCond = data.daily.data[i].icon.split('-').join(' '),
+                        weekCond = weekConditions.join(' '),
                         weekLow = Math.round(data.daily.data[i].temperatureMin),
                         weekHigh = Math.round(data.daily.data[i].temperatureMax);
+                    if (i === 0){
+                      day = 'Today';
+                    }
 
                     displayWeekly(day, weekIcon, weekCond, weekLow.toFixed(0), weekHigh.toFixed(0));
                 }
@@ -125,10 +145,9 @@ $(document).ready(function() {
         function displayWeekly(day, icon, condition, low, high) {
             let list = '<p class="day-name">' + day + '</p>';
             list += '<p class="day-icon wi wi-forecast-io-' + icon + '"></p>';
-            // list += '<p class="day-cond">' + condition + '</p>';
-            list += '<p class="day-temp">' + '<span class="wi wi-direction-up"></span>' + high + '°, ' + '<span class="wi wi-direction-down"></span>' + low + '°' + '</p>';
+            list += '<p class="day-temp">' + '<span class="wi wi-direction-up"></span>' + '<span class="temp-h">' + high + '°, ' + '</span>' + '<span class="wi wi-direction-down"></span>' + '<span class="temp-l">' + low + '°' + '</span>' + '</p>';
+            list += '<p class="day-cond">' + condition + '</p>';
             $('#temp-weekly').append('<li class="day">' + list + '</li>');
-
         } // end display weekly weather
 
         function toF(temp) {

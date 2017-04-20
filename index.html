@@ -22,7 +22,7 @@
 
 <body>
     <!-- loader -->
-    <!-- <div id="loading">
+    <div id="loading">
         <div id="loading-center">
             <div id="loading-center-absolute">
                 <div class="object" id="first_object"></div>
@@ -31,63 +31,67 @@
                 <div class="object" id="forth_object"></div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- ripple -->
     <div id="setting"></div>
 
     <!-- machanical watch -->
-    <div class="watch">
-        <embed wmode="transparent" type="application/x-shockwave-flash" quality="high" src="img/watch.swf">
-    </div>
+    <div class="page-top">
+        <div id="date" class="date-base">
+            <div class="date-face">
+                <div class="date-effect-head">
+                    <p class="date-weekday"></p>
+                </div>
+                <div class="date-effect-first">
+                    <p class="date-mon"></p>
+                    <p class="date-specific"></p>
+                    <p class="date-yr"></p>
+                </div>
+                <div class="date-effect-second">
+                    <p class="date-time"></p>
+                    <p class="date-ampm"></p>
+                </div>
+                <div class="date-effect-third">
+                    <p class="temp-now"></p>
+                    <nav class="temp-tick">
+                        <button id="temp-c" disabled>C</button>
+                        <span class="convert-arrow">⇆</span>
+                        <button id="temp-f">F</button>
+                    </nav>
+                </div>
+                <div class="date-effect-forth">
+                    <p class="forecast-city"></p>
+                    <p class="forecast-region"></p>
+                </div>
+            </div>
+        </div>
+        <div class="namecard">
+            <p class="namecard-author">Design by: <span>Zidian Lyu</span></p>
+            <p class="namecard-link">
+                <a class="namecard-linkedin" href="https://www.linkedin.com/in/zidianlyu/">
+                    <span class="fa fa-linkedin-square"></span>
+                </a>
 
-    <div id="date" class="date-base">
-        <div class="date-face">
-            <div class="date-effect-head">
-                <p class="date-weekday"></p>
-            </div>
-            <div class="date-effect-first">
-                <p class="date-mon"></p>
-                <p class="date-specific"></p>
-                <p class="date-yr"></p>
-            </div>
-            <div class="date-effect-second">
-                <p class="date-time"></p>
-                <p class="date-ampm"></p>
-            </div>
-            <div class="date-effect-third">
-                <p class="temp-now"></p>
-                <nav class="temp-tick">
-                    <button id="temp-c" disabled>C</button>
-                    <span class="convert-arrow">⇆</span>
-                    <button id="temp-f">F</button>
-                </nav>
-            </div>
-            <div class="date-effect-forth">
-                <p class="forecast-city"></p>
-                <p class="forecast-region"></p>
-            </div>
+                <a class="namecard-github" href="https://github.com/zidianlyu">
+                    <span class="fa fa-github"></span>
+                </a>
+            </p>
+        </div>
+        <div class="watch">
+            <embed wmode="transparent" type="application/x-shockwave-flash" quality="high" src="img/watch.swf">
         </div>
     </div>
 
-    <div class="weather-base">
-      <div id="weather" class="weather">
-        <div class="forecast">
-          <div class="forecast-daily">
-            <span class="forecast-icon"></span>
-            <span class="wi wi-direction-up"></span>
-            <span class="temp-h"></span>
-            <span class="wi wi-direction-down"></span>
-            <span class="temp-l"></span>
-          </div>
-          <p class="forecast-summary"></p>
-        </div>
+    <div class="page-content">
+        <div class="weather-base">
+            <div id="weather" class="weather">
+                <h1 class="weather-header">Weather</h1>
 
-        <div class="forecast-weekly">
-          <ul class="temp-weekly" id="temp-weekly">
-          </ul>
+                <ul class="temp-weekly" id="temp-weekly">
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
 
 

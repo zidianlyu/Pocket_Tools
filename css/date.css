@@ -1,10 +1,6 @@
 /*date*/
 
 .date-base {
-    margin: 0 auto;
-    position: fixed;
-    top: 10px;
-    left: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
@@ -92,9 +88,9 @@
 
 .date-time {
     font-family: 'Black Ops One', cursive;
-    width: 128px;
-    font-size: 27px;
-    padding: 2px 0px 0 8px;
+    width: 130px;
+    font-size: 26px;
+    padding: 2px 0px 0 4px;
     border: 1px inset #eee;
     background: #fff;
     border-radius: 9px 15px 4px 15px;

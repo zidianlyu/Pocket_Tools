@@ -1,0 +1,23 @@
+.namecard {
+    text-align: center;
+}
+
+.namecard-author {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.namecard-author {
+    font-size: 18px;
+}
+
+.namecard-link {
+    margin: 0 auto;
+}
+
+.namecard-link span {
+    color: #000;
+    font-size: 30px;
+    margin: 0 2px;
+}

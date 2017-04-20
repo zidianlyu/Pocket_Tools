@@ -4,10 +4,20 @@
 @import url('watch.css');
 @import url('date.css');
 @import url('weather.css');
+@import url('namecard.css');
 body {
     background: #fff;
 }
 
-h1 {
-    font-family: 'Nunito', sans-serif;
+.page-top{
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.page-content{
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
 }
