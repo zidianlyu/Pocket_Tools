@@ -1,8 +1,11 @@
 .weather-base {
+  position: fixed;
+  top: 230px;
+  left: 100px;
     background: rgba(0, 0, 0, 0.8);
     width: 80%;
-    margin: 273px auto 0 auto;
     border-radius: 5px;
+    padding: 9px;
 }
 
 .weather{
