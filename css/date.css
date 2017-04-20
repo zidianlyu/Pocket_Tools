@@ -60,6 +60,7 @@
     font-size: 14px;
     font-family: 'Cinzel', serif;
 }
+
 .date-yr {
     font-size: 14px;
     font-family: 'Cinzel', serif;
@@ -125,12 +126,12 @@
     margin: 0 6px 0 0;
 }
 
-#temp-c {
+.temp-btn {
     border-radius: 50%;
 }
 
-#temp-f {
-    border-radius: 50%;
+.temp-btn:hover {
+    cursor: pointer;
 }
 
 

@@ -3,13 +3,13 @@
 }
 
 .namecard-author {
-    font-family: 'Cinzel', serif;
-    font-size: 14px;
+    font-family: 'Nunito', serif;
+    font-size: 12px;
     margin: 0 auto;
 }
 
-.namecard-author {
-    font-size: 18px;
+.namecard-author span {
+    font-size: 14px;
 }
 
 .namecard-link {
@@ -20,4 +20,16 @@
     color: #000;
     font-size: 30px;
     margin: 0 2px;
+    border-radius: 50%;
+    padding: 7px 9px 7px 9px;
+    margin: auto 3px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.8s;
+    border: 1px outset #ddd;
+}
+
+.namecard-link span:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.14);
+    transition: all 0.8s;
 }

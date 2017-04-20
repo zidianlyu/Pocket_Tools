@@ -9,15 +9,15 @@ body {
     background: #fff;
 }
 
-.page-top{
-  margin: 10px 0 0 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+.page-top {
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
-.page-content{
-  margin: 20px 0 0 0;
-  display: flex;
-  justify-content: center;
+.page-content {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
 }
